@@ -1,0 +1,37 @@
+body{
+	background-color: palette(brand);
+	color: palettes(grey,x-dark);
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+hr{
+	height: 0;
+	border: none;
+	border-bottom: 1px solid palette(brand);
+}
+
+	.o-hr-white{
+		border-bottom: 1px solid white;		
+	}
+
+.link{
+	text-decoration: underline;
+}
+
+
+
+	

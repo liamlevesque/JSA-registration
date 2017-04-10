@@ -1,0 +1,77 @@
+@mixin button-base{
+	font-weight: 700;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+	
+	height: $button-height;
+	border: 2px solid transparent;
+	padding: 8px $default-margin;
+
+	&:disabled{
+		opacity: 0.4;
+		cursor: normal;
+		pointer-events: none;
+	}
+}
+
+@mixin button($text-color: white, $bg-color: palette(brand), $bg-hover: palette(brand,dark), $text-hover: white){
+	@include button-base;
+
+	position: relative;
+	display: inline-block;
+	border-radius: $default-border-radius;
+	font-size: fontsize(100);
+
+	background-color: $bg-color;
+	color: $text-color;
+
+	&:hover{
+		background-color: $bg-hover;
+		color: $text-hover;
+	}
+
+	&:focus{
+		outline: none;
+		border-color: palette(contrast,dark);
+	}
+	
+}
+
+@mixin text-button($text-color: white, $text-hover: white, $font-size:100){
+	@include button-base;
+	
+	font-size: fontsize($font-size);
+	background-color: transparent;
+	color: $text-color;
+
+	&:hover, &:focus{
+		color: $text-hover;
+	}
+}
+
+
+.o-button{
+	@include button();
+}
+
+.o-button--contrast{
+	@include button(white, palette(contrast), palette(contrast,dark));
+}
+
+.o-button--light{
+	@include button(palette(contrast), white, palette(contrast));
+}
+
+.o-button--outline{
+	@include button(palette(brand), transparent, palette(brand), white);
+	border-color: palette(brand);
+}
+
+.o-text-button{
+	@include text-button(palette(brand),palette(brand,dark),50);
+}
+
+.o-text-button--large{
+	@include text-button(palette(brand),palette(brand,dark));
+}

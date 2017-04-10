@@ -1,0 +1,100 @@
+<!-- @include '/assets/partials/header' -->
+
+	<h2 class="h-color-white h-mb-200">Auction List</h2>
+
+	<div class="c-container--auction s-active">
+		<h3 class="o-container--header">JSA Online Only Auction <button class="o-button--contrast h-float-right">Join the Auction</button></h3>
+
+		<div class="o-aligned-label-field"> 
+			<label class="o-aligned--label">Starts</label>
+			<span class="o-aligned--value">12/12/2016 @ 05:00 PM PST</span>
+		</div>
+		<div class="o-aligned-label-field"> 
+			<label class="o-aligned--label">Ends</label>
+			<span class="o-aligned--value">12/13/2016 @ 06:45 PM PST</span>
+		</div>
+
+		<div>
+			<div class="o-aligned-label-field"> 
+				<label class="o-aligned--label">Status</label>
+				<span class="o-aligned--value o-status-indicator">
+					Live Now
+				</span>
+			</div>
+			
+		</div>
+
+	</div>
+
+	<div class="c-container--auction s-ended">
+		<h3 class="o-container--header">JSA Online Only Auction</h3>
+
+		<div class="o-aligned-label-field"> 
+			<label class="o-aligned--label">Starts</label>
+			<span class="o-aligned--value">12/12/2016 @ 05:00 PM PST</span>
+		</div>
+		<div class="o-aligned-label-field"> 
+			<label class="o-aligned--label">Ends</label>
+			<span class="o-aligned--value">12/13/2016 @ 06:45 PM PST</span>
+		</div>
+
+		<div>
+			<div class="o-aligned-label-field"> 
+				<label class="o-aligned--label">Status</label>
+				<span class="o-aligned--value o-status-indicator">
+					Ended
+				</span>
+			</div>
+
+			
+		</div>
+
+	</div>
+
+<div class="c-modal" rv-class-s-visible="dataObject.enterEmailOnAuctionListPage">
+	<div class="c-modal--content">
+		<h3 class="o-container--header">Stay up to date with upcoming auctions</h3>
+
+		<p class="h-ta-center">Join our mailing list so we can notify you of upcoming auctions</p>
+
+		<div class="c-modal--sub-box h-mb-200">
+			
+			<label class="o-input--container">
+				<input type="email" class="o-input--text" tabindex="2" placeholder=" " rv-class-s-error_border="dataObject.loginUserError"> 
+				<span>E-mail Address</span> 
+			</label>
+			<div class="o-input--error-message_slim" rv-if="dataObject.loginUserError">Are you sure about that address?</div>
+			<div>
+				<label class="o-input--checkbox"> 
+                    <input type="checkbox" checked="checked">
+                    <span class="o-input--checksymbol"></span>
+                    <span>Notify me of upcoming auctions</span>
+                </label>
+			</div>
+		</div>
+
+		<div>
+
+			<button class="o-text-button--large" rv-on-click="controller.hideEmail">No Thanks</button>
+			<button class="o-button--contrast h-float-right" rv-on-click="controller.setEmail">Sign-up</button>
+
+		</div>
+
+	</div>
+</div> 
+
+<div class="c-modal" rv-class-s-visible="dataObject.confirmEmailOnAuctionListPage">
+	<div class="c-modal--content">
+		<h3 class="o-container--header">Thank you!</h3>
+
+		<p class="h-ta-center">You&rsquo;ve successfully signed up for the Japan Super Auction mailing list. </p>
+
+		<div class="h-ta-center">
+			<button class="o-button--contrast" rv-on-click="controller.hideEmail">Done</button>
+		</div>
+
+	</div>
+</div> 
+
+
+<!-- @include '/assets/partials/footer' --> 

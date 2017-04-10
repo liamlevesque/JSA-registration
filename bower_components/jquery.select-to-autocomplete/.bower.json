@@ -1,0 +1,14 @@
+{
+  "name": "jquery.select-to-autocomplete",
+  "homepage": "https://github.com/JamieAppleseed/selectToAutocomplete",
+  "_release": "5da5816199",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5da58161990c4ec6d467212b5ff0c259cc0e47d9"
+  },
+  "_source": "https://github.com/JamieAppleseed/selectToAutocomplete.git",
+  "_target": "*",
+  "_originalSource": "jquery.select-to-autocomplete",
+  "_direct": true
+}

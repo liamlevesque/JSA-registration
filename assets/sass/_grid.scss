@@ -1,0 +1,54 @@
+@mixin g-cell($width, $gutter){
+	box-sizing: border-box;
+	position: relative;
+	vertical-align: top;
+	
+	@include breakpoint(medium){
+		display: inline-block;
+		vertical-align: top;
+		width: $width;
+		margin-right: $gutter;
+
+		&:last-child{
+			float: right;
+			margin-right: 0;
+		}
+	}
+}
+
+	@mixin grid-quarter{
+		@include g-cell(24%, 1%);
+	}
+
+	@mixin grid-third{
+		@include g-cell(32%, 0.5%);
+	}
+
+	@mixin grid-half{
+		@include g-cell(49%, 1%);
+	}
+
+	@mixin grid-two-thirds{
+		@include g-cell(62%, 0.5%);
+	}
+
+	@mixin grid-three-quarters{
+		@include g-cell(74%, 1%);
+	}
+
+
+	.l-grid-quarter{
+		@include grid-quarter;
+	}
+	.l-grid-third{
+		@include grid-third;
+	}
+	.l-grid-half{
+		@include grid-half;
+	}
+	.l-grid-two-thirds{
+		@include grid-two-thirds;
+	}
+	.l-grid-three-quarters{
+		@include grid-three-quarters;
+	}

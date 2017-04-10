@@ -1,0 +1,9 @@
+
+.o-text-link{
+	color: palette(brand);
+
+	&:hover{
+		color: palette(brand,dark);
+		text-decoration: underline;
+	}
+}

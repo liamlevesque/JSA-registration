@@ -1,0 +1,34 @@
+.c-progress-nav{
+	display: flex;
+	flex-direction: row;
+}
+
+	.o-prgress--step{
+		flex-basis: 1;
+		padding: 5px 20px;
+		cursor: pointer;
+		user-select: none;
+		background:transparent url('../img/right-arrow.svg') right 0px center no-repeat;
+
+		&:first-of-type{
+			padding-left: 0;
+		}
+
+		&:last-of-type{
+			padding-right: 0;
+			background: transparent;
+		}
+
+		&.s-active{
+			margin-right: auto;
+
+			.o-progress--header{
+				color: palette(brand);
+			}
+		}
+	}
+
+		.o-progress--subheader{
+			color: palette(grey, dark);		
+		}
+

@@ -1,0 +1,60 @@
+$palettes: (
+    brand: (
+        base:   #0072C2,
+        dark:   #135897,
+    ),
+    contrast:(
+		base:   #E87722,
+        dark:   #C1631C,
+    ),
+    warning:(
+        base:   #FCD748,
+    ),
+    error:(
+        base:   #c4483a,
+        light:  #F3BFBF,
+    ),
+    active:(
+        base:   #20579E,
+    ),
+    affirmative:(
+        base: #36AE4F,
+    ),
+    grey: (
+        base:  #bfc0be,
+        x-light: #e8e6e2,
+        light: #E9E9E9,
+        dark: #585858,
+        x-dark: #333333,
+    )
+);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+
+$brand-color: #0072C2;
+$contrast-color: #E87722;
+
+$error-colour: #c4483a;
+$error-colour-light: #F3BFBF;
+$warning-colour: #FCD748;
+$active-colour: #20579E;
+$link-colour: #1478BC;
+
+$selected-background: rgba($brand-color,0.3);
+
+$black: #000000;
+$white: #ffffff;
+
+$grey-50: #e8e6e2;
+$grey-100: #E9E9E9;
+$grey-300: #bfc0be;
+$grey-500: #959595;
+$grey-700: #585858;
+$grey-900: #333333;
+
+$border-color: #bdbdbd;
+$border-active: #E35530;
+$border-separator: rgba(#959595,0.5);

@@ -1,0 +1,55 @@
+@mixin container{
+	padding: spacing(medium);
+	background-color: white;
+	box-shadow: $ritchie-shadow;
+}
+
+.c-container-box{
+	@include container;
+}
+
+.c-container-box_transparent{
+	padding: spacing(medium);
+}
+
+	.o-container--header{
+		margin-bottom: spacing(large);
+	}
+
+
+.c-container--auction{
+	overflow: hidden;
+	@include container;
+	margin-bottom: spacing(medium);
+
+	.o-status-indicator:before{
+		content: '';
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		margin-right: spacing(x-small);
+		vertical-align: middle;
+	}
+
+	&.s-active .o-status-indicator{
+		color: palette(affirmative);
+
+		&:before{
+			background-color: palette(affirmative);
+		}
+	}
+
+	&.s-ended{
+		background-color: rgba(white,0.9);
+		color: palette(grey, dark);
+	
+		.o-status-indicator{
+			color: palette(error);
+
+			&:before{
+				background-color: palette(error);
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.o-aligned-label-field{
+	margin-bottom: spacing(small);
+}
+
+	.o-aligned--label{
+		@include g-cell(15%, 1%);
+		
+		@include allcaps;
+		text-align: right;
+		font-size: fontsize(50);
+		line-height: fontsize(400);
+		color: palette(grey);
+	}
+
+	.o-aligned--value{
+		@include g-cell(84%, 1%);
+	}
