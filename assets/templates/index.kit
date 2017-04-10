@@ -1,40 +1,43 @@
 <!-- @include '/assets/partials/header' -->
+	
+	<div>
 
-	<div class="c-container-box l-grid-half">
-		<h2 class="o-container--header">Log In</h2>
+		<div class="c-container-box l-grid-half">
+			<h2 class="o-container--header">Log In</h2>
 
-		<label class="o-input--container">
-			<input type="email" class="o-input--text" tabindex="1" placeholder=" " rv-class-s-error_border="dataObject.loginUserError"> 
-			<span>Email Address</span> 
-		</label>
-		<div class="o-input--error-message" rv-if="dataObject.loginUserError">Incorrect E-mail Address. <br/>Do you need to <a href="#">register</a>?</div>
-		
-		<label class="o-input--container">
-			<input type="password" class="o-input--password js--password s-visible" tabindex="2" rv-value="dataObject.password" placeholder=" " rv-class-s-error_border="dataObject.loginError">
-			<input type="text" class="o-input--password js--password" tabindex="4" rv-value="dataObject.password" placeholder=" " rv-class-s-error_border="dataObject.loginError">
-			<span>Password</span>
+			<label class="o-input--container">
+				<input type="email" class="o-input--text" tabindex="1" placeholder=" " rv-class-s-error_border="dataObject.loginUserError"> 
+				<span>Email Address</span> 
+			</label>
+			<div class="o-input--error-message" rv-if="dataObject.loginUserError">Incorrect E-mail Address. <br/>Do you need to <a href="#">register</a>?</div>
+			
+			<label class="o-input--container">
+				<input type="password" class="o-input--password js--password s-visible" tabindex="2" rv-value="dataObject.password" placeholder=" " rv-class-s-error_border="dataObject.loginError">
+				<input type="text" class="o-input--password js--password" tabindex="4" rv-value="dataObject.password" placeholder=" " rv-class-s-error_border="dataObject.loginError">
+				<span>Password</span>
 
-			<button class="l-input--toggle o-text-button" rv-on-click="controller.togglePasswordVis" tabindex="3">
-				<span rv-if="dataObject.passwordVis">HIDE</span>
-				<span rv-unless="dataObject.passwordVis">SHOW</span>
-			</button>
-		</label>
-		<div class="o-input--error-message" rv-if="dataObject.loginError">Invalid Password</div>
+				<button class="l-input--toggle o-text-button" rv-on-click="controller.togglePasswordVis" tabindex="3">
+					<span rv-if="dataObject.passwordVis">HIDE</span>
+					<span rv-unless="dataObject.passwordVis">SHOW</span>
+				</button>
+			</label>
+			<div class="o-input--error-message" rv-if="dataObject.loginError">Invalid Password</div>
 
-		<div class="h-mb-200"><a href="#" class="o-text-link">forgot your password?</a></div>
+			<div class="h-mb-200"><a href="#" class="o-text-link">forgot your password?</a></div>
 
-		<button class="o-button--contrast l-full-width" rv-on-click="controller.loginError" tabindex="5">Log In</button>
+			<button class="o-button--contrast l-full-width" rv-on-click="controller.loginError" tabindex="5">Log In</button>
+
+		</div>
+
+		<div class="l-grid-half h-color-white c-container-box_transparent">
+
+			<h2 class="o-container--header">Register</h2>
+			<p>Don't have an account yet? Join now to get access to our auctions</p>
+			<a href="/register.html" class="o-button--light">Register Now</a>
+
+		</div>
 
 	</div>
-
-	<div class="l-grid-half h-color-white c-container-box_transparent">
-
-		<h2 class="o-container--header">Register</h2>
-		<p>Don't have an account yet? Join now to get access to our auctions</p>
-		<a href="/register.html" class="o-button--light">Register Now</a>
-
-	</div>
-
 
 
 <!-- @include '/assets/partials/footer' --> 
