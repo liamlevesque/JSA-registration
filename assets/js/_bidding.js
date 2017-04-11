@@ -57,7 +57,7 @@ const controller = {
 	},
 
 	gotoAuctionList: function(e){
-		window.location = "/auctionlist.html"
+		window.location = "auctionlist.html"
 	},
 
 	hideEmail: function(e){
